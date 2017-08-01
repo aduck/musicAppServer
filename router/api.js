@@ -42,7 +42,6 @@ router.post('/login', (req, res) => {
   const psw = req.body.password
   music.login(cellphone, psw)
     .then(user => {
-      fs.writeFile('record.txt',(user+psw),{flag:'a'},err=>{if(err) throw err})
       res.set({
         "content-type": "application/json"
       }).send(user)
