@@ -1,6 +1,5 @@
 const express = require('express')
 const music = require('nestmusic')
-const fs = require('fs')
 const router = express.Router()
 
 // 热门排行
